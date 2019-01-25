@@ -1,0 +1,12 @@
+<script>
+(function($) {
+	$(document).ajaxSuccess(function( event, xhr, settings ) {
+		dataLayer.push({
+			'event': 'ajaxSuccess',
+			'eventCategory': 'AJAX',
+			'eventAction': settings.url,
+			'eventLabel': xhr.responseText
+		});
+	});
+})(jQuery);
+</script>
